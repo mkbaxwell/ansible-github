@@ -1,7 +1,6 @@
 ---
 
 ##run "ansible-playbook rolestest.yml --ask-vault-pass"
-#test
 
 
 - hosts: switches
