@@ -1,0 +1,31 @@
+---
+# tasks file for roles/switches
+
+##run "ansible-playbook rolestest.yml --ask-vault-pass"
+
+- name: show secret variable
+  debug:
+    msg: "Here is the secret variable in my encrypted ansible-vault file: {{secret_password}}"
+
+- name: Get config for NX-OS devices
+  cisco.nxos.nxos_facts:
+    gather_subset: all
+
+- name: Display the config
+  debug:
+    msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
+
+- name: Update the hostname
+  cisco.nxos.nxos_config:
+    #backup: yes
+    lines:
+      - configure terminal
+      - hostname IChangedNameInPlaybook
+
+- name: Get changed config for nxos devices
+  cisco.nxos.nxos_facts:
+    gather_subset: all
+
+- name: Display the changed config
+  debug:
+    msg: "The new hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"

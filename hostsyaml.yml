@@ -1,0 +1,46 @@
+all:
+  children:
+
+    routers:
+      children:
+        iosxe_routers:
+          hosts:
+            10.10.20.[175:176]:
+          vars:
+            ansible_network_os: ios
+
+    switches:
+      children:
+        nx_switches:
+          hosts:
+            10.10.20.[177:178]:
+          vars:
+            ansible_network_os: nxos
+
+  #shared variables between both routers and switches
+  vars:
+    ansible_ssh_user: cisco 
+    #ansible_ssh_pass: cisco - see comment below
+    ansible_connection: network_cli
+    ansible_become: yes
+    ansible_become_method: enable
+    ansible_become_password: cisco
+
+    #this way invloves running "ansible-vault encrypt_string cisco --ask-vault-pass", setting the vault password, pasting the encrpyted 
+    #output as the value and then running the playbook with "ansible-playbook tut.yml --ask-vault-pass" and then typing in the
+    #password that you set when running the first command. This way is simple and quick in that you can quickly excrypt any string you want
+    #and include it in your inventory like this, however, it does require including that extra --ask-vault-pass parameter everytime you run
+    #a playbook against these hosts, and it also requires that you write down/store the vault password to decrypt it so you don't forget.
+    ##
+    #you can also do a similar thing, but instead of --ask-vault-pass, you can store your password in a txt file and use "--vault-password-file
+    #file.txt" in the 2 commands above. This still requires extra parameters when running commands, but allows you to keep your vault pwd 
+    #somewhere rather than having to remember it. This is what the Ansible "networking getting started" docs say to do, at least for .yml inventory
+    #ansible docs say: "Make sure the permissions on the (vault password) file are appropriate. Do not add password files to source control"
+    ansible_ssh_pass: !vault |
+                      $ANSIBLE_VAULT;1.1;AES256
+                      37383436363966366432653635363437303035643463646363333933353730313066353435353165
+                      6438383961633133343766633133333731353462636535370a373661616634616136636335373464
+                      32343830663863323064393139393266643232313535646333336436383962356132313239313830
+                      3632363730323737390a356662636230383162623037356432616261363634396330333232383734
+                      6462
+              

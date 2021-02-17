@@ -1,0 +1,14 @@
+---
+
+##run "ansible-playbook rolestest.yml --ask-vault-pass"
+#test
+
+
+- hosts: switches
+  become: true
+
+  vars_files:
+    - ./roles/switches/vars/vaultfile.yml
+  roles:
+    - switches
+
