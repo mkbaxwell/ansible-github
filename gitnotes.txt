@@ -48,8 +48,10 @@ run "git pull origin main" to pull down any changes in the 'main' branch within 
 --------------------------------------------------------
 
 
-
 WAY 2: GitHub Desktop 
+
+
+----How to push changes you make locally up to github:----
 
 #step 1: Download GitHub Desktop: https://desktop.github.com/ and sign into your GitHub account
 
@@ -60,6 +62,11 @@ any changes you make locally to any files within your project and show you those
 Once you've reviewed those changes and are ready to push them to GH, add a commit comment in the bottom left specifying
 what you are changing/adding, and click commit. This will commit the changes to your local repo. To push those changes 
 up to GH, select 'Push Changes' at the top. This will push those changes to whatever branch you have selected at the top.
+
+
+------how to pull code down from github to your local machine:-------
+
+All you should have to do is have the current branch selected along the top bar that you want to pull from, and then click 
 
 
 ---------------------------------------
