@@ -72,7 +72,7 @@ if it detects any changes, that button you just pushed will now say "Pull Origin
 your local repo.
 
 
-added
+added word
 
 
 ---------------------------------------
