@@ -66,9 +66,10 @@ up to GH, select 'Push Changes' at the top. This will push those changes to what
 
 ------how to pull code down from github to your local machine:-------
 
-All you should have to do is have the current branch selected along the top bar that you want to pull from, and then click 
+All you should have to do is have the current branch selected along the top bar that you want to pull from, and then click
+"Fetch origin" in the top right which will check to see if GitHub has any changes in any files that you don't have locally,
+if it detects any changes, that button you just pushed will now say "Pull Origin"  
 
-pulled from github
 
 ---------------------------------------
 
