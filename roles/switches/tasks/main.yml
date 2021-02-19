@@ -3,6 +3,8 @@
 
 ##run "ansible-playbook rolestest.yml --ask-vault-pass"
 
+#comment
+
 - name: show secret variable
   debug:
     msg: "Here is the secret variable in my encrypted ansible-vault file: {{secret_password}}"
