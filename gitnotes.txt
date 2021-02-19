@@ -40,7 +40,7 @@ all files. You can then run "git commit -m <comment about what you changed/are a
 want to push to a different branch)
 
 
-------how to pull changes from github:------------
+------how to pull changes from github:-------
 
 run "git pull origin main" to pull down any changes in the 'main' branch within your github to your local project
 
@@ -83,8 +83,12 @@ your changes.
 ---------------------------------------
 
 
+<<<<<<< HEAD
 WAY 3: Using Git in VSCode (Guide: https://code.visualstudio.com/docs/editor/github#:~:text=Using%20GitHub%20with%20Visual%20Studio%20Code%20lets%20you,install%20the%20GitHub%20Pull%20Requests%20and%20Issues%20extension.)
 
 Use source control tab on left pane of VSCode
+=======
+WAY 3: VSCode Extension (Guide: https://code.visualstudio.com/docs/editor/github#:~:text=Using%20GitHub%20with%20Visual%20Studio%20Code%20lets%20you,install%20the%20GitHub%20Pull%20Requests%20and%20Issues%20extension.)
 
-WAY 2: GitHub Desktop
+>>>>>>> ab8dde2d70ed7d91cce8b168ffddc5bfa100403b
+
