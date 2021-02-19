@@ -1,6 +1,8 @@
 
-##notes on using github for ansible version control
+##notes on using github for ansible version control - I've played around with a few different ways of how to do it
 -------------------------------------------------------
+
+WAY 1 - Command Line
 
 ----How to push changes you make locally up to github:----
 
@@ -37,8 +39,11 @@ all files. You can then run "git commit -m <comment about what you changed/are a
 #step 9: You can now run "git push origin main" to push your files to a branch called "main" in github (You can use a different name if you 
 want to push to a different branch)
 
------------------------------------
 
 ------how to pull changes from github:------------
 
 run "git pull origin main" to pull down any changes in the 'main' branch within your github to your local project
+
+--------------------------------------------------------
+
+WAY 2: GitHub Desktop
