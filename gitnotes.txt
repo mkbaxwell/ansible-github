@@ -71,13 +71,18 @@ All you should have to do is have the current branch selected along the top bar 
 if it detects any changes, that button you just pushed will now say "Pull Origin" which will pull any new/updated files into
 your local repo.
 
+IMPORTANT NOTE: It is a good idea to pull code from github often and especially before you start to make any changes. It's not
+a huge deal, however, if you try to push your own changes up to github when someone else has pushed a change to github since
+you last pulled the latest build, (i.e. your current version minus your new changes doesn't match the current version on github)
+you may get an error/notification telling you to review the differences or to pull the current github version before you can add
+your changes.
 
-added word
-added
-word
 
 
 ---------------------------------------
+---------------------------------------
 
 
-WAY 3: VSCode Extension
+WAY 3: VSCode Extension (Guide: https://code.visualstudio.com/docs/editor/github#:~:text=Using%20GitHub%20with%20Visual%20Studio%20Code%20lets%20you,install%20the%20GitHub%20Pull%20Requests%20and%20Issues%20extension.)
+
+
