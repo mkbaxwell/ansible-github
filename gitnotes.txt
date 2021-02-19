@@ -40,10 +40,29 @@ all files. You can then run "git commit -m <comment about what you changed/are a
 want to push to a different branch)
 
 
-------how to pull changes from github:------------
+------how to pull changes from github:-------
 
 run "git pull origin main" to pull down any changes in the 'main' branch within your github to your local project
 
 --------------------------------------------------------
+--------------------------------------------------------
 
-WAY 2: GitHub Desktop
+
+
+WAY 2: GitHub Desktop 
+
+#step 1: Download GitHub Desktop: https://desktop.github.com/ and sign into your GitHub account
+
+#step 2: In the top left, choose existing/create a new repository
+
+#step 3: Once you have linked your local repository to a repository on GitHub, GitHub Desktop will automatically detect 
+any changes you make locally to any files within your project and show you those changes.
+Once you've reviewed those changes and are ready to push them to GH, add a commit comment in the bottom left specifying
+what you are changing/adding, and click commit. This will commit the changes to your local repo. To push those changes 
+up to GH, select 'Push Changes' at the top. This will push those changes to whatever branch you have selected at the top.
+
+
+---------------------------------------
+
+
+WAY 3: VSCode Extension
