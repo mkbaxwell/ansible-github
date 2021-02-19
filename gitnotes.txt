@@ -1,0 +1,43 @@
+##notes on using github for ansible version control
+-------------------------------------------------------
+
+----How to push changes you make locally up to github:----
+
+#step 1: create a github repo
+
+#step 2: copy link of github repo
+
+#step 3: if needed, install git on your machine with "sudo apt update" and "sudo apt install git" 
+
+#step 4: on your control node (main ansible machine), run "git clone <link to github repo>". this will clone your github repo to a new folder 
+on your local machine, which should be empty or contain just the README file at the moment
+
+#step 5: if you already have an existing ansible project/ansible files that you want to use version control on, copy those files to the new folder
+that was created on your machine - you may need to change some of the file paths in some files like ansible.cfg, vars, etc... now that they are in 
+a new folder. If you have not written any ansible files yet (aka you are just starting to use ansible and want to set up the github repo first, 
+which is probably the best way), then you do not have to move any files over obviously.
+
+#step 6: run "git config --global user.name <whatever username you want here>" and "git config --global user.email <whatever email you want here>". 
+Git will complain when you try to run any commnads if you dont set these. These settings are for showing who is making changes to github
+
+#step 7: run "git status" to see any changes you have made to local files that have not been committed and added to github repo. You can run
+this command at anytime to see this information
+
+IMPORTANT NOTE ABOUT HOW GITHUB WORKS: To push any changes you make to files locally, you first have to add those files to a new "commit", then
+"commit" those changes including a comment about what changes have been made, and then you can push that commit to the github repo. Basically,
+you have a hidden .git folder within your local project that you add changed files to, you then commit those files, which basically says 
+"hey i added some new files/changed some files in here, they are also ready to be sent to github", and then you can push them to github 
+which will add/overwrite the cooresponding files on github 
+
+#step 8: After you've made changes to any files that you now want to push to github, you can run "git add <file names>" or "git add -A" to add
+all files. You can then run "git commit -m <comment about what you changed/are adding>". Your changes have now been commited to your local
+.git folder and are ready to be pushed to github
+
+#step 9: You can now run "git push origin main" to push your files to a branch called "main" in github (You can use a different name if you 
+want to push to a different branch)
+
+-----------------------------------
+
+------how to pull changes from github:------------
+
+run "git pull origin main" to pull down any changes in the 'main' branch within your github to your local project
