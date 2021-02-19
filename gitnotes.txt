@@ -68,6 +68,7 @@ up to GH, select 'Push Changes' at the top. This will push those changes to what
 
 All you should have to do is have the current branch selected along the top bar that you want to pull from, and then click 
 
+pulled from github
 
 ---------------------------------------
 
